@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <title>Password Generator</title>
 </head>
@@ -11,13 +12,14 @@
     <div class="pw-container">
         <div class="pw-header">
             <div class="pw">
-                <button>Copy to clipboard</button>
+                <span id="pw"></span>
+                <button id="copy"><i class="fas fa-copy"></i></button>
             </div>
         </div>
         <div class="pw-body">
             <div class="form-control">
                 <label for="len">Password Length</label>
-                <input type="number" id="len" min="4" max="40" />
+                <input type="number" id="len" value="10" min="4" max="20" />
             </div>
             <div class="form-control">
                 <label for="upper">Contain Uppercase Letters</label>
@@ -35,6 +37,9 @@
                 <label for="symbol">Contain Symbols</label>
                 <input type="checkbox" id="symbol" />
             </div>
+            <button class="generate" id="generate">
+                Generate Password
+            </button>
         </div>
     </div>
     <script src="./app.js" type="text/javascript"></script>
